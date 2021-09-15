@@ -1,0 +1,30 @@
+{
+    "1": {
+        "ID": "1",
+        "Nombre": "TREGAR QUESO HOLANDAXKG.",
+        "Codigo_de_barras": "12",
+        "Rating": "2.585150522",
+        "Cantidad_Puntuaciones": "27"
+    },
+    "2": {
+        "ID": "2",
+        "Nombre": "UBRE",
+        "Codigo_de_barras": "5099",
+        "Rating": "0.560243983",
+        "Cantidad_Puntuaciones": "26"
+    },
+    "3": {
+        "ID": "3",
+        "Nombre": "HORNO - PLAST",
+        "Codigo_de_barras": "",
+        "Rating": "0.124828186",
+        "Cantidad_Puntuaciones": "81"
+    },
+    "4": {
+        "ID": "4",
+        "Nombre": "COLORADO",
+        "Codigo_de_barras": "77936189",
+        "Rating": "3.414764943",
+        "Cantidad_Puntuaciones": "0"
+    }
+}

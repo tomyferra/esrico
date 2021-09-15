@@ -131,7 +131,7 @@ footer .border {
 }
 
 .toolbar {
-  background-color: #192229;
+  background-color: #333c4b;
 
   width: 100%;
   display: flex;
@@ -259,7 +259,7 @@ footer .border {
   max-width: 150px;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0;
+  border-radius: 5px;
   font-size: 14px;
 }
 
@@ -450,7 +450,7 @@ input:checked + .switch:before {
 
 .container {
   display: flex;
-  background: #192229;
+  background: #333c4b;
 }
 .container-footer {
   display: flex;
@@ -459,7 +459,7 @@ input:checked + .switch:before {
 
   padding: 0 40px 0 40px;
   justify-content: space-between;
-  background: #192229;
+  background: #333c4b;
 }
 
 .container-footer a {
@@ -546,10 +546,13 @@ input:checked + .switch:before {
   /* overflow: hidden; */
 }
 
+.star-rating-icon {
+  width: 20px;
+}
 .productBox p {
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 400;
-  color: #7a7a7a;
+  color: #151515;
   line-height: 22px;
   padding: 0;
   /* min-height: 70px;
@@ -845,7 +848,7 @@ form .submit-rating:hover {
 }
 
 .search-btn {
-  background: #9d9d9d;
+  background: #d4a056;
   border-top-right-radius: 7px;
   cursor: pointer;
   border-width: 0px;
@@ -1000,7 +1003,7 @@ form .submit-rating:hover {
 }
 .card {
   padding: 10px;
-  background-color: #9d9d9d;
+  background-color: #4a4c5c;
   border-radius: 15px;
 }
 .card-description {
@@ -1046,7 +1049,7 @@ form .submit-rating:hover {
 
 .card-container {
   border-radius: 16px;
-  background: #f2f2f2;
+  background: #ffffffe8;
 
   margin-top: 20px;
 }
@@ -1056,8 +1059,9 @@ form .submit-rating:hover {
 }
 
 .blue-btn {
-  background-color: #4bb2f9;
-  font-size: 15px;
+  background-color: #d4a056;
+  font-size: 18px;
+  color: #efefef;
   border: 1px solid;
   width: 120%;
   border-radius: 10px;
@@ -1081,7 +1085,7 @@ form .submit-rating:hover {
 
 .add_product_btn {
   padding: 5px;
-  background-color: #4bb2f9;
+  background-color: #d4a056;
   font-size: 20px;
   border: 1px solid;
   border-width: 0px;
@@ -1089,8 +1093,40 @@ form .submit-rating:hover {
   color: #efefef;
   cursor: pointer;
 }
+
+.classes-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.select-sort-by {
+  padding-top: 5px;
+  margin-top: 1px;
+}
+.MuiSelect-outlined {
+  color: white;
+}
+.MuiSvgIcon-root {
+  color: white !important;
+}
+.rating-value {
+  font-size: 20px;
+}
+.MuiSvgIcon-colorSecondary {
+  color: yellow;
+}
+.MuiOutlinedInput-root {
+  color: white !important;
+}
+.MuiIconButton-root {
+  color: white;
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
 .blue-btn:hover {
-  font-size: 17px;
+  font-size: 20px;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -1133,7 +1169,7 @@ form .submit-rating:hover {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background: #192229;
+  background: #333c4b;
 }
 
 .light a {
@@ -1143,6 +1179,8 @@ form .submit-rating:hover {
 
 .modal {
   position: fixed;
+
+  z-index: 100;
   left: 0;
   top: 0;
   right: 0;
@@ -1271,6 +1309,9 @@ form .submit-rating:hover {
 /**************************************************************************************************/
 
 @media only screen and (max-width: 1024px) {
+  .toolrow {
+    padding-bottom: 5px;
+  }
   .product-col {
     float: none;
     width: auto;
@@ -1378,6 +1419,9 @@ form .submit-rating:hover {
 }
 
 @media only screen and (max-width: 800px) {
+  .toolrow {
+    padding-bottom: 5px;
+  }
   .toolrow li {
     padding-left: 10px;
     text-align: center;
@@ -1409,18 +1453,6 @@ form .submit-rating:hover {
     width: 100%;
   }
 
-  .fav-flex {
-    flex-direction: column;
-  }
-
-  .first-order {
-    order: 1;
-  }
-
-  .second-order {
-    order: 0;
-  }
-
   .fav-img {
     display: inline-block;
     width: 65px;
@@ -1432,6 +1464,9 @@ form .submit-rating:hover {
 }
 
 @media only screen and (max-width: 700px) {
+  .toolrow {
+    padding-bottom: 5px;
+  }
   .show-fav .fav-list {
     padding-left: 15px;
     padding-right: 15px;
@@ -1529,6 +1564,37 @@ form .submit-rating:hover {
 }
 
 @media only screen and (max-width: 500px) {
+  .toolrow {
+    padding-bottom: 5px;
+  }
+  .rating-btn {
+    padding: 3px;
+  }
+  .modal-container {
+    width: 280px;
+  }
+  .container-footer {
+    padding: 0;
+  }
+  .donations {
+    font-size: 10px;
+  }
+  .bubbles {
+    flex-direction: column;
+  }
+  .bubbles img {
+    max-width: 20%;
+  }
+  .bubbles a {
+    font-size: 12px;
+  }
+  .agradecimientos {
+    font-size: 12px;
+  }
+  .social-network {
+    font-size: 10px;
+  }
+
   .header-title {
     width: 130px;
     word-wrap: break-word;
@@ -1560,9 +1626,11 @@ form .submit-rating:hover {
   .show-products {
     width: 100%;
   }
+
   .dropdown_sort {
     display: flex;
     flex-direction: column;
+
     align-items: center;
   }
 
@@ -1583,6 +1651,30 @@ form .submit-rating:hover {
 }
 
 @media only screen and (max-width: 390px) {
+  .container-footer {
+    padding: 0;
+  }
+  .donations {
+    font-size: 10px;
+  }
+  .bubbles {
+    flex-direction: column;
+  }
+  .bubbles img {
+    max-width: 20%;
+  }
+  .bubbles a {
+    font-size: 12px;
+  }
+  .agradecimientos {
+    font-size: 12px;
+  }
+  .social-network {
+    font-size: 10px;
+  }
+  .container-footer a {
+    margin: 5px;
+  }
   .action span {
     flex: 0 0 100%;
     text-align: left;

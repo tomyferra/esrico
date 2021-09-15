@@ -5,7 +5,6 @@ function Header() {
         <div className="d-flex justify-content-between">
           <a
             className="header-title"
-            href="#"
             style={{ color: "#f2f2f2", textDecoration: "none" }}
           >
             <img
@@ -23,8 +22,6 @@ function Header() {
           Hola <b>Tomas. </b>&nbsp;
           <span>
             <a
-              style={{ color: "0.2s ease-out 0s" }}
-              href="#"
               className="login-btn"
               style={{ color: "#f2f2f2", textDecoration: "none" }}
             >

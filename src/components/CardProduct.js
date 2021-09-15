@@ -1,5 +1,8 @@
 import { useState } from "react";
 import AddOpinionModal from "./AddOpinionModal";
+import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
+import StarIcon from "@material-ui/icons/Star";
 
 function CardProduct(props) {
   const ID = props.id;
@@ -10,10 +13,15 @@ function CardProduct(props) {
   const Cantidad_Puntuaciones = props.puntuaciones;
 
   const [show, setShow] = useState(false);
-  function addOpinion() {
-    console.log("Add new opinion");
-    /* Open a modal.. */
-  }
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   function getRoundedValue(Rating) {
     var rating_final = 0;
@@ -47,15 +55,22 @@ function CardProduct(props) {
         </div>
       </div>
       <div className="productBox ">
-        <p>Precio: ${Precio}</p>
+        <p>${Precio}</p>
         <span className="puntuaciones">
-          <strong>
-            Puntaje: {Rating} / 5 ({Cantidad_Puntuaciones})
-          </strong>
+          <b className="rating-value">
+            <i class="fa fa-star fa-1x"></i>
+            &nbsp;&nbsp;{Rating}
+          </b>
           <div>
-            <button className="blue-btn" onClick={() => setShow(true)}>
+            <Button
+              onClick={() => setShow(true)}
+              variant="contained"
+              color="primary"
+              disableElevation="true"
+            >
               Opinar
-            </button>
+            </Button>
+
             <AddOpinionModal
               onClose={() => setShow(false)}
               show={show}

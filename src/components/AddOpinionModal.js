@@ -1,37 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Rating from "@material-ui/lab/Rating";
-import Box from "@material-ui/core/Box";
-
-const labels = {
-  0.5: "0.5",
-  1: "1",
-  1.5: "1.5",
-  2: "2",
-  2.5: "2.5",
-  3: "3",
-  3.5: "3.5",
-  4: "4",
-  4.5: "4.5",
-  5: "5",
-};
-
-const useStyles = makeStyles({
-  root: {
-    width: 200,
-    display: "flex",
-    alignItems: "center",
-  },
-});
 
 function AddOpinionModal(props) {
   const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);
-  const classes = useStyles();
-  const id = props.ID;
   const Nombre = props.Nombre;
   var Puntaje = props.Rating;
-  var Precio = props.Precio;
   var Cantidad_Puntuaciones = props.Cantidad_Puntuaciones;
   if (!props.show) {
     return null;
@@ -105,18 +77,7 @@ function AddOpinionModal(props) {
               <label for="5">5</label>
             </div>
           </div>
-          {/* 
-          <Rating
-            name="simple-controlled"
-            value={Puntaje}
-            precision={0.5}
-            size="large"
-            onChange={(event, newValue) => {
-              var newValue = (newValue + Puntaje) / 2;
-              console.log(newValue);
-              setValue(newValue);
-            }}
-          />*/}
+
           <h4>
             {Puntaje} / 5 ({Cantidad_Puntuaciones})
           </h4>

@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/esrico/static/css/main.e9177db0.chunk.css",
-    "main.js": "/esrico/static/js/main.676f50dd.chunk.js",
-    "main.js.map": "/esrico/static/js/main.676f50dd.chunk.js.map",
+    "main.js": "/esrico/static/js/main.a34c9f50.chunk.js",
+    "main.js.map": "/esrico/static/js/main.a34c9f50.chunk.js.map",
     "runtime-main.js": "/esrico/static/js/runtime-main.0ea04a56.js",
     "runtime-main.js.map": "/esrico/static/js/runtime-main.0ea04a56.js.map",
-    "static/js/2.b7fe6ef1.chunk.js": "/esrico/static/js/2.b7fe6ef1.chunk.js",
-    "static/js/2.b7fe6ef1.chunk.js.map": "/esrico/static/js/2.b7fe6ef1.chunk.js.map",
+    "static/js/2.b453ce08.chunk.js": "/esrico/static/js/2.b453ce08.chunk.js",
+    "static/js/2.b453ce08.chunk.js.map": "/esrico/static/js/2.b453ce08.chunk.js.map",
     "index.html": "/esrico/index.html",
     "static/css/main.e9177db0.chunk.css.map": "/esrico/static/css/main.e9177db0.chunk.css.map",
-    "static/js/2.b7fe6ef1.chunk.js.LICENSE.txt": "/esrico/static/js/2.b7fe6ef1.chunk.js.LICENSE.txt"
+    "static/js/2.b453ce08.chunk.js.LICENSE.txt": "/esrico/static/js/2.b453ce08.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0ea04a56.js",
-    "static/js/2.b7fe6ef1.chunk.js",
+    "static/js/2.b453ce08.chunk.js",
     "static/css/main.e9177db0.chunk.css",
-    "static/js/main.676f50dd.chunk.js"
+    "static/js/main.a34c9f50.chunk.js"
   ]
 }

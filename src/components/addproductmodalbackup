@@ -1,0 +1,140 @@
+import React, { Component } from "react";
+import axios from "axios";
+import Alert from "@material-ui/lab/Alert";
+
+export default class CreateProduct extends Component {
+  constructor(props) {
+    super(props);
+
+    this.onChangeProductName = this.onChangeProductName.bind(this);
+    this.onChangeCompany = this.onChangeCompany.bind(this);
+    this.onChangePrice = this.onChangePrice.bind(this);
+    this.onChangeRating = this.onChangeRating.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
+    this.state = {
+      productname: "",
+      company: "",
+      price: 0,
+      rating: 0,
+    };
+  }
+
+  onChangeProductName(e) {
+    this.setState({
+      productname: e.target.value,
+    });
+  }
+
+  onChangeCompany(e) {
+    this.setState({
+      company: e.target.value,
+    });
+  }
+
+  onChangePrice(e) {
+    this.setState({
+      price: e.target.value,
+    });
+  }
+
+  onChangeRating(e) {
+    this.setState({
+      rating: e.target.value,
+    });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    const product = {
+      productname: this.state.productname,
+      company: this.state.company,
+      price: this.state.price,
+      rating: this.state.rating,
+    };
+
+    console.log(product);
+
+    axios
+      .post("http://localhost:5000/products/add", product)
+      .then((res) => console.log(res.data));
+
+    this.setState({
+      productname: "",
+      company: "",
+      price: 0,
+      rating: 0,
+      show: false, // initially modal is hidden
+    });
+    <Alert severity="success">Producto agregado con exito!</Alert>;
+  }
+
+  render() {
+    return (
+      <div className="modal">
+        <form onSubmit={this.onSubmit}>
+          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">Nuevo Producto</div>
+            <div className="modal-body">
+              <label>Nombre: </label>
+              <input
+                type="text"
+                required
+                placeholder="Producto..."
+                className="add-product-input"
+                value={this.state.productname}
+                onChange={this.onChangeProductName}
+              />
+            </div>
+            <div className="modal-body">
+              <label>Empresa: </label>
+              <input
+                type="text"
+                required
+                placeholder="Empresa..."
+                className="add-product-input"
+                value={this.state.company}
+                onChange={this.onChangeCompany}
+              />
+            </div>
+            <div className="modal-body">
+              <label>Precio: </label>
+              <input
+                type="text"
+                required
+                placeholder="$ Precio..."
+                className="add-product-input"
+                value={this.state.price}
+                onChange={this.onChangePrice}
+              />
+            </div>
+            <div className="modal-body">
+              <label>Rating (0-5): </label>
+              <input
+                type="text"
+                required
+                placeholder="Puntaje"
+                className="add-product-input"
+                value={this.state.rating}
+                onChange={this.onChangeRating}
+              />
+            </div>
+
+            <div className="modal-body">Agregá una foto!</div>
+
+            <form action="/action_page.php">
+              <input type="file" id="myFile" name="filename" />
+            </form>
+            <div className="modal-footer">
+              <button className="red-btn">Close</button>
+              <button className="blue-btn-footer" type="submit">
+                Save{" "}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}

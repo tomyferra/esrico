@@ -29,6 +29,7 @@ function Toolbar(props) {
           >
             Agregar un producto &nbsp;&nbsp;<i className="fa fa-plus"></i>
           </Button>
+
           <AddProductModal onClose={() => setShow(false)} show={show} />
         </div>
         <div className="search-bar">

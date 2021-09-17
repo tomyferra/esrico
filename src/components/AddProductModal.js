@@ -1,5 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import Rating from "@material-ui/lab/Rating";
+
+import axios from "axios";
 
 function AddProductModal(props) {
   const [value, setValue] = React.useState(2);
